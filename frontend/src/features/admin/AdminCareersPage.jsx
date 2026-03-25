@@ -5,7 +5,7 @@ import JobFormModal from '../careers/JobFormModal';
 import './AdminDashboard.css';
 import './AdminCareers.css';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
 export default function AdminCareersPage() {
   const navigate = useNavigate();

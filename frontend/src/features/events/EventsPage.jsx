@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
 import RegisterModal from './RegisterModal';
+import SEO from '../../components/SEO';
 import './Events.css';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);
@@ -57,6 +58,10 @@ export default function EventsPage() {
 
   return (
     <div className="events-page">
+      <SEO 
+        title="Discover Extraordinary Events" 
+        description="Connect, learn, and grow with world-class conferences, workshops, and networking events at EventHub."
+      />
 
       {/* Hero Section */}
       <header className="events-hero">

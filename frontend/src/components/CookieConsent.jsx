@@ -14,6 +14,8 @@ const getCookie = (name) => {
     ?.split("=")[1];
 };
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
@@ -27,7 +29,7 @@ export default function CookieConsent() {
 
   const sendConsent = async (type) => {
     try {
-      await axios.post("http://localhost:5000/api/consent", {
+      await axios.post(`${API_BASE}/api/consent`, {
         consent: type
       });
     } catch (err) {

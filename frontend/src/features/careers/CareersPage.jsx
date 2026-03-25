@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ApplyModal from './ApplyModal';
+import SEO from '../../components/SEO';
 import './Careers.css';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
 // ── Main Page ────────────────────────────────────────────────────────────────
 export default function CareersPage() {
@@ -31,6 +32,10 @@ export default function CareersPage() {
 
   return (
     <div className="c-page">
+      <SEO 
+        title="Careers | Join Our Team" 
+        description="Build the future of live experiences with us. Explore open positions in engineering, design, and events at EventAdmin."
+      />
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="c-hero">
         <div className="c-hero-grid" />

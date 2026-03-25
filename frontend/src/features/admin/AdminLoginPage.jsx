@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import SEO from "../../components/SEO";
 import "./AdminLogin.css";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 export default function AdminLoginPage() {
   const navigate = useNavigate();
@@ -74,6 +75,10 @@ export default function AdminLoginPage() {
 
   return (
     <div className="login-page">
+      <SEO 
+        title="Admin Login" 
+        description="Access the EventHub administration portal."
+      />
       <form className="login-box" onSubmit={handleLogin}>
         <h2>Admin Login</h2>
 
