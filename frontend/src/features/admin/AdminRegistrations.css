@@ -1,0 +1,39 @@
+/* ── Registrations search input ── */
+.reg-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reg-search {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  width: 220px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.reg-search::placeholder {
+  color: #4b5680;
+}
+
+.reg-search:focus {
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+/* Refresh button variant */
+.btn-refresh {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #60a5fa !important;
+  box-shadow: none !important;
+}
+.btn-refresh:hover {
+  background: rgba(59, 130, 246, 0.22) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
